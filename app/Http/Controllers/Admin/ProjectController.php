@@ -47,7 +47,8 @@ class ProjectController extends Controller
         $newProject->name = $form_project["name"];
         $newProject->language_dev = $form_project["language_dev"];
         $newProject->framework = $form_project["framework"];
-        $newProject->start_date = $form_project["start_date"]; 
+        $newProject->start_date = $form_project["start_date"];
+        $newProject->type_id = $form_project["type_id"];
         $newProject->description = $form_project["description"];
         $newProject->slug = Str::slug($newProject->name, '-');
         $newProject->save();
