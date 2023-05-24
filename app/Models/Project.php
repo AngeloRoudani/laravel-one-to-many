@@ -14,8 +14,13 @@ class Project extends Model
         'name',
         'language_dev',
         'framework',
-        'start_date'
+        'start_date',
+        'type_id'
     ];
 
-    
+    public function type() {
+
+        return $this->belongsTo(Type::class);
+
+    }
 }

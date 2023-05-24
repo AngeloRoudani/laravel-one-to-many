@@ -35,6 +35,16 @@
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                 </div>
+                <!-- Select del tipo di progetto-->
+                <label for="type_id" class="form-label">Data di inizio</label>
+                <select class="form-select" id="type_id" name="type_id">
+                    <option value="">Nessun Tipo</option>
+                    @foreach ($types as $type )
+                        <option value="{{$type->id}}">{{$type->name}}</option>
+                    @endforeach
+
+                </select>
+
                 <div class="mb-3">
                     <label for="description" class="form-label">Descrizione</label>
                     <input type="text" id="description" name="description" class="form-control" value="{{ old('description') }}">
